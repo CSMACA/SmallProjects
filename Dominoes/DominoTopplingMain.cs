@@ -9,18 +9,6 @@ namespace Dominoes
     /// </summary>
     class DominoToppling
     {
-        class Domino
-        {
-            public Domino(char direction)
-            {
-                Direction = direction;
-            }
-            /// <summary>
-            /// Contains direction that the domino is falling.
-            /// L,.,R
-            /// </summary>
-            public char Direction { get; set; }
-        }
 
         static string INITIAL;
 

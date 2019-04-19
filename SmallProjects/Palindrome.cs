@@ -32,9 +32,27 @@ public class Palindrome
         return (word == wordReversed);
     }
 
+    public static string input()
+    {
+        string str;
+        Console.WriteLine("Enter word to check if it is a palindrome:");
+        str = Console.ReadLine();
+        return str;
+    }
+
     public static void Main(string[] args)
     {
-        Console.WriteLine(IsPalindrome("Racecar"));
-        Console.ReadKey();
+        bool rerun = true;
+        do
+        {
+            string word = input();
+            Console.WriteLine(IsPalindrome(word));
+            Console.WriteLine("Would you like to go again? (Y/n)");
+            if (Console.ReadLine() == "n")
+            {
+                rerun = false;
+            }
+            Console.Clear();
+        } while (rerun);
     }
 }
